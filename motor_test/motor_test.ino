@@ -10,6 +10,7 @@ Servo escr;
 //int v=0;
 void setup()
 {
+
 escf.attach(6);
 escb.attach(9);
 escl.attach(11);
