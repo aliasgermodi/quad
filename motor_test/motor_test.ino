@@ -28,7 +28,7 @@ void loop()
 //throttle = map(throttle, 0, 1023, 0, 179);
  
   
-
+/*
  for(int i=0;i<170;i++)
  {
    delay(250);  
@@ -38,5 +38,9 @@ void loop()
    escl.write(i);  
    escr.write(i);
 
- }
+ }*/
+   escf.write(10);
+   escb.write(10);  
+   escl.write(10);  
+   escr.write(10);
 }

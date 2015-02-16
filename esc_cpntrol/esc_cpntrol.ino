@@ -16,7 +16,7 @@ void loop()
 //int throttle = analogRead(throttlePin);
 //throttle = map(throttle, 0, 1023, 0, 179);
  
-  //esc.write(50);
+  //esc.write(0);
  for(int i=0;i<170;i++)
  {
    delay(250);  

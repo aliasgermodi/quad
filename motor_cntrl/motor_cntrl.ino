@@ -4,15 +4,20 @@ Servo escf;
 Servo escb;
 Servo escl;
 Servo escr;
+int led = 13;
+
 
 //int throttlePin = 0;
 //int v=0;
 void setup()
 {
-  escf.attach(6);
-  escb.attach(9);
-  escl.attach(11);
-  escr.attach(10);
+  pinMode(led,OUTPUT);
+  digitalWrite(led,HIGH);
+  
+  escf.attach(10);
+  escb.attach(5);
+  escl.attach(9);
+  escr.attach(6);
   Serial.begin(9600);
   escf.write(0);
   escb.write(0);
@@ -31,13 +36,15 @@ void loop()
     input += (char) Serial.read();  // read one char at a time
     delay(5);  // delay of 5ms for next char 
   }
+  
+  
     
   if(input == "on")
   {
-    escf.write(10);
-    escb.write(10);  
-    escl.write(10);  
-    escr.write(10);  
+    escf.write(20);
+    escb.write(20);  
+    escl.write(20);  
+    escr.write(20);  
   }
   
   else if(input == "front")
