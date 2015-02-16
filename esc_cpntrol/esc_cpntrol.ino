@@ -5,6 +5,7 @@ Servo esc;
 //int v=0;
 void setup()
 {
+
 esc.attach(9);
 Serial.begin(9600);
 esc.write(0);
